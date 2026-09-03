@@ -9,12 +9,19 @@ import (
   "enccoding/hex"
   "encoding/xml"
   "os"
+
+  //These are needed for the socket.
+  "log"
+  "net"
+  "os/signal"
+  "syscall" 
 )
 
 func main() {
   //Here, start daemon\socket that programs can call to fetch which profile is logged in.
-  prog = os.Args[0]
-  cmd = os.Args[1]
+
+  prog := os.Args[0]
+  cmd := os.Args[1]
   switch cmd {
     case "login":
       uname, passwd, hash := ""
@@ -28,7 +35,7 @@ func main() {
       // Same thing as login but instead of reading stores it in the .xml password document
       // Exits program after and tells user to log in with their credentials by running the program again
 
-    case default:
+    default:
       fmt.Println("signin v1.0")
       fmt.Println("Usage: signin <option> [username] [password]")
       fmt.Println("Options:")
