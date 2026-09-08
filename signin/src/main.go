@@ -1,21 +1,32 @@
-//Login, signup, and logout GUI (or api, if i want this tot go further) that logs passwords and holds SHA256 encrypted passwords
-//in a XML markdown file. Passwords are stored and read from XML and log is a simple ASCII file with nothing fancy.
-//Creates a socckewt/ddaemon (whatever idk) that apps can call to login or check what user is logged in.
+// Login, signup, and logout GUI (or api, if i want this tot go further) that logs passwords and holds SHA256 encrypted passwords
+// in a XML markdown file. Passwords are stored and read from XML and log is a simple ASCII file with nothing fancy.
+// Creates a socckewt/ddaemon (whatever idk) that apps can call to login or check what user is logged in.
 package main
 
 import (
-  "fmt"
-  "crypo/sha256"
-  "enccoding/hex"
-  "encoding/xml"
-  "os"
+	"crypo/sha256"
+	"enccoding/hex"
+	"encoding/hex"
+	"encoding/xml"
+	"fmt"
+	"os"
 
-  //These are needed for the socket.
-  "log"
-  "net"
-  "os/signal"
-  "syscall" 
+	//These are needed for the socket.
+	"log"
+	"net"
+	"os/signal"
+	"syscall"
 )
+
+//TODO:
+//First step, hash function that takes in a string and hashes it in SHA256 and returns a string
+//Second step, write the basics for the XML writer and reader
+
+func hash(input string) string{
+  h := sha256.New()
+  h.Write([]byte(input))
+  out := hex.EncodeToString(h.Sum(nil))
+} //WIP
 
 func main() {
   //Here, start daemon\socket that programs can call to fetch which profile is logged in.
