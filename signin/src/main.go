@@ -5,7 +5,6 @@ package main
 
 import (
 	"crypo/sha256"
-	"enccoding/hex"
 	"encoding/hex"
 	"encoding/xml"
 	"fmt"
@@ -26,12 +25,14 @@ func hash(input string) string{
   h := sha256.New()
   h.Write([]byte(input))
   out := hex.EncodeToString(h.Sum(nil))
+  return out
 } //WIP
 
 func main() {
+  
   //Here, start daemon\socket that programs can call to fetch which profile is logged in.
 
-  prog := os.Args[0]
+  //prog := os.Args[0]
   cmd := os.Args[1]
   switch cmd {
     case "login":
