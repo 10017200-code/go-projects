@@ -38,7 +38,7 @@ func main() {
       var uname, passwd, hash string
       fmt.Println(uname, passwd, hash) //Temp
       fmt.Print("userid: ")
-      
+
       //Login code here.
       //Asks for username with fmt.Scanln(&uname)
       //Asks for password (2.0 will try to not echo password) with fmt.Scanln(&passwd)
