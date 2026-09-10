@@ -20,9 +20,9 @@ func main() {
 	stringHash := hash(coolString)
 	var hashMatch string
 	if stringHash == storedStringHash {
-		hashMatch = "yes"
+		hashMatch = " yes"
 	} else {
-		hashMatch = "no"
+		hashMatch = " no"
 	}
 	fmt.Println("Hash equivalent to stored hash?" + hashMatch)
 }
