@@ -29,7 +29,6 @@ func hash(input string) string{
 } //WIP
 
 func main() {
-  
   //Here, start daemon\socket that programs can call to fetch which profile is logged in.
 
   //prog := os.Args[0]
@@ -38,6 +37,8 @@ func main() {
     case "login":
       var uname, passwd, hash string
       fmt.Println(uname, passwd, hash) //Temp
+      fmt.Print("userid: ")
+      
       //Login code here.
       //Asks for username with fmt.Scanln(&uname)
       //Asks for password (2.0 will try to not echo password) with fmt.Scanln(&passwd)
