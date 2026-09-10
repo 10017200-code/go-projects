@@ -35,11 +35,13 @@ func main() {
   cmd := os.Args[1]
   switch cmd {
     case "login":
-      var uname, passwd, hash string
-      fmt.Println(uname, passwd, hash) //Temp
+      var uname, passwd, hashed string
+      fmt.Println(uname, passwd, hashed) //Temp
       fmt.Print("userid: ")
-      var userid string
       fmt.Scanln(&userid)
+      fmt.Print("passwd: ")
+      fmt.Scanln(&passwd)
+      hashed = hash(passwd)
       //Login code here.
       //Asks for username with fmt.Scanln(&uname)
       //Asks for password (2.0 will try to not echo password) with fmt.Scanln(&passwd)
