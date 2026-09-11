@@ -41,7 +41,7 @@ func main() {
       fmt.Print("passwd: ")
       fmt.Scanln(&passwd)
       hashed = hash(passwd)
-      fmt.Println("[ DEBUG ] userid=%s passwd=%s hashed=%s", userid, passwd, hashed)
+      fmt.Printf("[ DEBUG ] userid=%s passwd=%s hashed=%s\n", userid, passwd, hashed)
       //Login code here.
       //Asks for username with fmt.Scanln(&uname)
       //Asks for password (2.0 will try to not echo password) with fmt.Scanln(&passwd)
