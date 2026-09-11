@@ -6,15 +6,15 @@ package main
 import (
 	"crypo/sha256"
 	"encoding/hex"
-	"encoding/xml"
+	//"encoding/xml" Commented out til needed
 	"fmt"
 	"os"
 
-	//These are needed for the socket.
-	"log"
-	"net"
-	"os/signal"
-	"syscall"
+	//These are needed for the socket. Commented out til needed
+	//"log"
+	//"net"
+	//"os/signal"
+	//"syscall"
 )
 
 //TODO:
@@ -35,13 +35,13 @@ func main() {
   cmd := os.Args[1]
   switch cmd {
     case "login":
-      var uname, passwd, hashed string
-      fmt.Println(uname, passwd, hashed) //Temp
+      var userid, passwd, hashed string
       fmt.Print("userid: ")
       fmt.Scanln(&userid)
       fmt.Print("passwd: ")
       fmt.Scanln(&passwd)
       hashed = hash(passwd)
+      fmt.Println("[ DEBUG ] userid=%s passwd=%s hashed=%s", userid, passwd, hashed)
       //Login code here.
       //Asks for username with fmt.Scanln(&uname)
       //Asks for password (2.0 will try to not echo password) with fmt.Scanln(&passwd)
