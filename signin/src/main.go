@@ -4,7 +4,7 @@
 package main
 
 import (
-	"crypo/sha256"
+	"crypto/sha256"
 	"encoding/hex"
 	//"encoding/xml" Commented out til needed
 	"fmt"
