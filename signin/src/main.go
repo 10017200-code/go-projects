@@ -35,6 +35,8 @@ func main() {
   cmd := os.Args[1]
   switch cmd {
     case "login":
+      //TODO:
+      //Hash userids
       var userid, passwd, hashed string
       fmt.Print("userid: ")
       fmt.Scanln(&userid)
